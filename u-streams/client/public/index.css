@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(46, 45, 45);
+    color: blanchedalmond;
+}
+
+label, .description, .item {
+    color: blanchedalmond !important;
+}
+
+.main-menu a.item, #modal {
+    color: #000 !important;
+}

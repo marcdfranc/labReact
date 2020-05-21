@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'gochi_handregular';
+    src: url('fonts/gochihand-regular-webfont.woff2') format('woff2'),
+         url('fonts/gochihand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'gochi_handregular, arial';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+.board {	
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	max-width: 800px;
+	margin: 20px auto;
+}
+
+.board .table {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	background-color: black;
+	gap: 15px;
+	max-height: 313px;
+}
+
+.board .table .cell {
+	align-self: start;
+}
+
+.board .table .cell .win button {
+	color: tomato;
+}
+
+.board .table .cell button {
+	font-family: 'gochi_handregular';
+	background-color: white;
+	color: purple;
+	font-size: 7vw;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	border: none;
+}
+
+.board .control-panel {
+	padding: 15px;
+	border: 0.5px solid gray;
+	margin-left: 20px;
+}
+
+.board .control-panel button {
+	width: 100%;
+}
+
+.board .control-panel .menu {
+	margin-top: 20px;
+}
+
+.board .control-panel .menu button {
+	color: white;
+}
+
+.board .control-panel .menu button:hover {
+	color: #000;
+}
+
+.msg {
+	padding: 20px 0;
+	width: 100%;
+	text-align: center;
+	background-color: #0078e7;
+	margin: 15px 0;
+	color: white;
+}
+
+.msg h1 {
+	font-weight: bold;
+	font-size: 20px;
+}
+
