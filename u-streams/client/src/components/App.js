@@ -27,6 +27,6 @@ const App = () => {
 	</div>);
 }
 
-// 1086373743901-ov133it784fkioknl5kvj0qe8e0r6i8f.apps.googleusercontent.com
+
 
 export default App;  
