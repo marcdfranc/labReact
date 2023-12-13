@@ -1,7 +1,11 @@
 import React from 'react'
 import { Navbar, Container, Nav, Offcanvas } from 'react-bootstrap'
 
-export const MainNav = () => {
+interface Props {
+	onStartGameClick : ( ) => void
+}
+
+export const MainNav = ({onStartGameClick} : Props) => {
 	return (
 		<>			
 			<Navbar bg='dark' expand='md' data-bs-theme='dark' className='bg-body-tertiary' >
@@ -15,7 +19,7 @@ export const MainNav = () => {
 						<Offcanvas.Body>
 							<Nav className='justify-content-end flex-grow-1'>
 								<Nav.Link>Choose your players</Nav.Link>
-								<Nav.Link>Start Game</Nav.Link>
+								<Nav.Link onClick={onStartGameClick}>Start Game</Nav.Link>
 							</Nav>
 						</Offcanvas.Body>				
 					</Navbar.Offcanvas>

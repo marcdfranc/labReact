@@ -9,7 +9,7 @@ interface Props {
 
 export const Board = ({table, onCellClick} : Props) => {
     return (<>
-			<Container>
+			<Container>				
 				{table.map((row, i) => (
 					<Row key={`row-${i}`} className='p-3'>
 						{row.map((col, j) => (
