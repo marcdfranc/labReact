@@ -1,0 +1,65 @@
+{
+  "$schema": "./node_modules/json-server/schema.json",
+  "houses": [
+    {
+      "id": 1,
+      "address": "12 Valley of Kings, Geneva",
+      "country": "Switzerland",
+      "price": 900000.56
+    },
+    {
+      "id": 2,
+      "address": "98 Road of Forks, Bern",
+      "country": "Switzerland",
+      "price": 900000
+    },
+    {
+      "address": "32 Valley Way, New York",
+      "country": "USA",
+      "price": 1000000,
+      "id": 3
+    },
+    {
+      "address": "77 Forecast lane, Lancaster",
+      "country": "UK",
+      "price": 5000000,
+      "id": 4
+    },
+    {
+      "address": "33 Magush Road, London",
+      "country": "UK",
+      "price": 532389,
+      "id": 5
+    },
+    {
+      "address": "54 Angus Lane, Manchester",
+      "country": "UK",
+      "price": 958900,
+      "id": 6
+    },
+    {
+      "address": "77 Redentor Road, Brighton",
+      "country": "UK",
+      "price": 1039800,
+      "id": 7
+    },
+    {
+      "address": "77 Armando Bressan, Araraquara-SP",
+      "country": "Brazil",
+      "price": 500000,
+      "id": 8
+    },
+    {
+      "address": "11 Ellesmere st, Manchester",
+      "country": "UK",
+      "price": 60000000000,
+      "id": 9
+    },
+    {
+      "address": "31 Passage de pio, Cecilia",
+      "country": "Italy",
+      "price": 125000,
+      "id": 10
+    }
+  ]
+}
