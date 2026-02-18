@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { HouseList } from './HouseList';
 import { AddHouseButton } from './AddHouseButton';
 
-export const Houses = () => {
+export const Houses = ({selectHouse}) => {
   
     const [houses, setHouses] = useState([]);    
     const [loading, setLoading] = useState(true)
@@ -41,7 +41,7 @@ export const Houses = () => {
                     Houses currently on the market
                 </h5>
             </div>    
-           <HouseList houses={houses} />
+           <HouseList houses={houses} selectHouse={selectHouse} />
            <AddHouseButton callBack={addHouse} />
         </>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import  { HouseRow }  from './HouseRow';
 
-export const HouseList = ({houses}) => {    
+export const HouseList = ({houses, selectHouse}) => {    
   return (
     <>       
         <table className="table table-hover">
@@ -13,7 +13,7 @@ export const HouseList = ({houses}) => {
                 </tr>
             </thead>
             <tbody>
-                {houses.map(h => <HouseRow key={h.id} house={h} />)}
+                {houses.map(h => <HouseRow key={h.id} house={h} selectHouse={selectHouse} />)}
             </tbody>
         </table>        
     </>

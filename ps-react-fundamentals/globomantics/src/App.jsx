@@ -1,8 +1,11 @@
+import { useState } from 'react'
 import './App.css'
 import { Banner } from './components/Banner'
 import { Houses } from './components/Houses'
+import { HouseDetail } from './components/HouseDetail'
 
 function App() {  
+  const [selectedHouse, setSelectedHouse] = useState()
 
   return (
     <>
@@ -11,7 +14,7 @@ function App() {
           Providing Houses all over the world!!
         </div>
       </Banner>
-      <Houses />
+      {selectedHouse? <HouseDetail house={selectedHouse} /> : <Houses selectHouse={setSelectedHouse} /> }
     </>
   )
 }
