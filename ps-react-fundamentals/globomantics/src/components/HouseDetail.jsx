@@ -1,15 +1,14 @@
-import React from 'react'
-import { currencyFormatter } from "../helpers/currencyFormatter"
-import defaultPhoto from "../helpers/defaultPhoto"
+import React from 'react';
+import { currencyFormatter } from '../helpers/currencyFormatter';
+import defaultPhoto from '../helpers/defaultPhoto';
 
-
-export const HouseDetail = ({house}) => {
-   const getImageUrl = (name) => {     
-    return `./assets/${name}`   
-  }
+export const HouseDetail = ({ house }) => {
+  const getImageUrl = (name) => {
+    return `/src/assets/${name}`;
+  };
 
   return (
-     <div className="row">
+    <div className="row">
       <div className="col-6">
         <div className="row">
           <img
@@ -38,5 +37,5 @@ export const HouseDetail = ({house}) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
