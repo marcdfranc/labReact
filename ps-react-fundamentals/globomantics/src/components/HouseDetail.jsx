@@ -1,10 +1,16 @@
+import { useLocation } from 'react-router';
 import { currencyFormatter } from '../helpers/currencyFormatter';
 import defaultPhoto from '../helpers/defaultPhoto';
 
-export const HouseDetail = ({ house }) => {
+export const HouseDetail = () => {
+  const location = useLocation();
+  const { house } = location.state;
+
   const getImageUrl = (name) => {
     return `/src/assets/${name}`;
   };
+
+  console.log(house.address);
 
   return (
     <div className="row">
