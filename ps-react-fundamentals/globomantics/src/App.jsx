@@ -1,28 +1,26 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import './App.css';
 import { Banner } from './components/Banner';
-import { Houses } from './components/Houses';
-import { HouseDetail } from './components/HouseDetail';
+
 import ErrorBoundary from './components/ErrorBoundary';
+import { HouseList } from './components/HouseList';
+import navValues from './helpers/navigation/navValues';
+import { ComponentPicker } from './components/ComponentPicker';
 
 function App() {
-  const [selectedHouse, setSelectedHouse] = useState();
+  const navigate = useCallback((navTo) => setNav({ current: navTo, navigate }));
 
-  const setSelectedHouseWrapper = (house) => {
-    setSelectedHouse(house);
-  };
+  const [nav, setNav] = useState(navValues.home);
 
   return (
-    <ErrorBoundary fallback="Something went wrong!">
-      <Banner>
-        <div>Providing Houses all over the world!!</div>
-      </Banner>
-      {selectedHouse ? (
-        <HouseDetail house={selectedHouse} />
-      ) : (
-        <Houses selectHouse={setSelectedHouseWrapper} />
-      )}
-    </ErrorBoundary>
+    <navigationContext.Provider value={nav}>
+      <ErrorBoundary fallback="Something went wrong!">
+        <Banner>
+          <div>Providing Houses all over the world!!</div>
+        </Banner>
+        <ComponentPicker currentNavLocation={nav.current} />
+      </ErrorBoundary>
+    </navigationContext.Provider>
   );
 }
 
