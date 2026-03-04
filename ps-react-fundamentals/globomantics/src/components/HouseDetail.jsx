@@ -1,4 +1,3 @@
-import React from 'react';
 import { currencyFormatter } from '../helpers/currencyFormatter';
 import defaultPhoto from '../helpers/defaultPhoto';
 
