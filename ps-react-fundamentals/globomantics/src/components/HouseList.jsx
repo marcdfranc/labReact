@@ -2,7 +2,7 @@ import React from 'react';
 import { HouseRow } from './HouseRow';
 import ErrorBoundary from './ErrorBoundary';
 
-export const HouseList = ({ houses, selectHouse }) => {
+export const HouseList = ({ houses }) => {
   return (
     <>
       <table className="table table-hover">
@@ -16,7 +16,7 @@ export const HouseList = ({ houses, selectHouse }) => {
         <tbody>
           <ErrorBoundary fallback="Error loading house rows!">
             {houses.map((h) => (
-              <HouseRow key={h.id} house={h} selectHouse={selectHouse} />
+              <HouseRow key={h.id} house={h} />
             ))}
           </ErrorBoundary>
         </tbody>

@@ -4,7 +4,7 @@ import { useHouses } from '../hooks/useHouses';
 import { loadingStatus } from '../helpers/loadingStatus';
 import { LoadingIndicator } from './LoadingIndicator';
 
-export const Houses = ({ selectHouse }) => {
+export const Houses = () => {
   const { houses, setHouses, loading } = useHouses();
 
   const addHouse = (house) => {
@@ -22,7 +22,7 @@ export const Houses = ({ selectHouse }) => {
           Houses currently on the market
         </h5>
       </div>
-      <HouseList houses={houses} selectHouse={selectHouse} />
+      <HouseList houses={houses} />
       <AddHouseButton callBack={addHouse} />
     </>
   );

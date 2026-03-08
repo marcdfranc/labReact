@@ -9,7 +9,9 @@ export const useHouses = () => {
     const fetchHouses = async () => {
       setLoading(loadingStatus.isLoading);
       try {
-        const response = await fetch('http://localhost:4000/houses');
+        const response = await fetch(
+          'http://localhost:4000/houses?_embed=bids'
+        );
         const houses = await response.json();
         setHouses(houses);
         setLoading(loadingStatus.loaded);

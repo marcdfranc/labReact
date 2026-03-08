@@ -6,7 +6,7 @@ export const HouseRow = ({ house }) => {
   const navigate = useNavigate();
 
   return (
-    <tr onClick={() => navigate(`/house`, { state: { house } })}>
+    <tr onClick={() => navigate(`/house/${house.id}`)}>
       <td>{house.address}</td>
       <td>{house.country}</td>
       <td>{currencyFormatter.format(house.price)}</td>

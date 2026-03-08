@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/json-server/schema.json",
   "houses": [
-     {
+    {
       "id": 1,
       "address": "12 Valley of Kings, Geneva",
       "country": "Switzerland",
@@ -40,6 +40,74 @@
       "description": "This luxurious three bedroom flat is contemporary in style and benefits from the use of a gymnasium and a reserved underground parking space.",
       "price": 400500,
       "photo": "164558"
+    }
+  ],
+  "bids": [
+    {
+      "id": 1,
+      "houseId": 1,
+      "bidder": "Sonia Reading",
+      "amount": 200000
+    },
+    {
+      "houseId": 1,
+      "bidder": "Dick Johnson",
+      "amount": 202400,
+      "id": 2
+    },
+    {
+      "bidder": "Mohammed Vahls",
+      "amount": "302400",
+      "houseId": 2,
+      "id": 3
+    },
+    {
+      "bidder": "Jane Williams",
+      "amount": "310500",
+      "houseId": 2,
+      "id": 4
+    },
+    {
+      "bidder": "John Kepler",
+      "amount": 315400,
+      "houseId": 2,
+      "id": 5
+    },
+    {
+      "bidder": "Bill Mentor",
+      "amount": 201000,
+      "houseId": 3,
+      "id": 6
+    },
+    {
+      "bidder": "Melissa Kirk",
+      "amount": 410000,
+      "houseId": 4,
+      "id": 7
+    },
+    {
+      "bidder": "Scott Max",
+      "amount": 450000,
+      "houseId": 4,
+      "id": 8
+    },
+    {
+      "bidder": "Christine James",
+      "amount": "470000",
+      "houseId": 4,
+      "id": 9
+    },
+    {
+      "bidder": "Omesh Carim",
+      "amount": "450000",
+      "houseId": 5,
+      "id": 10
+    },
+    {
+      "bidder": "Charlotte Max",
+      "amount": "150000",
+      "houseId": 5,
+      "id": 11
     }
   ]
 }
