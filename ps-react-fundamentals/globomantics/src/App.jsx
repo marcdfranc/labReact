@@ -16,7 +16,7 @@ function App() {
         </Banner>
         <Routes>
           <Route index element={<Houses />} />
-          <Route path="house" element={<HouseDetail />} />
+          <Route path="house/:id" element={<HouseDetail />} />
         </Routes>
       </ErrorBoundary>
     </BrowserRouter>

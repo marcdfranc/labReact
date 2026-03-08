@@ -1,16 +1,18 @@
-import { useLocation } from 'react-router';
 import { currencyFormatter } from '../helpers/currencyFormatter';
 import defaultPhoto from '../helpers/defaultPhoto';
+import { Bids } from './Bids';
+import { useSingleHouse } from '../hooks/useSingleHouse';
+import { BidsForm } from './BidsForm';
+import { LoadingIndicator } from './LoadingIndicator';
 
 export const HouseDetail = () => {
-  const location = useLocation();
-  const { house } = location.state;
+  const { house, addBid, bid, setBid } = useSingleHouse();
 
   const getImageUrl = (name) => {
     return `/src/assets/${name}`;
   };
 
-  console.log(house.address);
+  if (!house) return <LoadingIndicator loadingState="Loading..." />;
 
   return (
     <div className="row">
@@ -39,6 +41,10 @@ export const HouseDetail = () => {
         </div>
         <div className="row">
           <div className="col-12 mt-3">{house.description}</div>
+        </div>
+        <div className="row">
+          <Bids bids={house.bids} />
+          <BidsForm addBid={addBid} bid={bid} setBid={setBid} />
         </div>
       </div>
     </div>
